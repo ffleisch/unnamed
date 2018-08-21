@@ -7,11 +7,6 @@
 #define ERROR_INC
 
 
-void throwError(std::string text);
-class Error
-{
-public:
-	Error();
-	~Error();
-};
+void throwError(const char* text); 
+void throwError(char* text);
 #endif // !ERROR_INC
