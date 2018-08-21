@@ -34,19 +34,22 @@ void game::init(){
 
 	std::cout << mainContext << std::endl;
 	SDL_GL_SetSwapInterval(1);
-	glViewport(0, 0, 512, 512);
+	//glViewport(0, 0, 512, 512);
 
 
 }
 
 void game::gameloop(){
 	test2 = new shaderManager("./shaders/vertex.vert", "./shaders/fragment.frag");
-	test = new box(0.3f, 0.1f, -0.3f, 0.1f, test2);
+	test = new box(0.3f, 0.1f, -0.3f, -0.1f, test2);
+	box test3(-0.7,-0.7,-0.6,0,test2);
+	
 	while (isRunning){
-		glClearColor(0, 0, 0, 0);
+		glClearColor(0, 0.5, (SDL_GetTicks()%1000)/1000.f, 0);
 		glClear(GL_COLOR_BUFFER_BIT);
 		test2->use();
 		test->draw();
+		test3.draw();
 		
 		SDL_GL_SwapWindow(mainWindow);
 

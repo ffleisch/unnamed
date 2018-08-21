@@ -1,8 +1,3 @@
 ﻿  game.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  shaderManager.cpp
-  renderObject.cpp
-  box.cpp
-  Source.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\game.cpp(45): warning C4305: 'argument': truncation from 'double' to 'float'
   agame.vcxproj -> C:\Users\Felix\Documents\GitHub\unnamed\workspace\Debug\agame.exe
