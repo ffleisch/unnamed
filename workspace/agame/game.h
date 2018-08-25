@@ -2,6 +2,8 @@
 #include "common.h"
 #include "Error.h"
 #include "box.h"
+#include "render.h"
+#include "rect.h"
 #ifndef GAME_INC
 #define GAME_INC
 
@@ -10,9 +12,8 @@ enum gamestate {menu,running,paused,loading};
 class game
 {
 public:
-
-	box* test;
 	shaderManager* test2;
+	render mainRender;
 	gamestate state = menu;
 	bool isRunning = true;
 

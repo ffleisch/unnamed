@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glm;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\lib\x86;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -131,9 +131,11 @@
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gui.cpp" />
+    <ClCompile Include="rect.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="renderObject.cpp" />
     <ClCompile Include="shaderManager.cpp" />
+    <ClCompile Include="singleGO.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,9 +144,11 @@
     <ClInclude Include="Error.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gui.h" />
+    <ClInclude Include="rect.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="renderObject.h" />
     <ClInclude Include="shaderManager.h" />
+    <ClInclude Include="singleGO.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\fragment.frag" />

@@ -22,7 +22,7 @@ void game::init(){
 		throwError("Could not init SDL");
 	}
 
-	mainWindow = SDL_CreateWindow("Tha Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 512, 512, SDL_WINDOW_OPENGL);
+	mainWindow = SDL_CreateWindow("Tha Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 1024, SDL_WINDOW_OPENGL);
 	if (!mainWindow) {
 		throwError("Could not create Window");
 	}
@@ -41,16 +41,28 @@ void game::init(){
 
 void game::gameloop(){
 	test2 = new shaderManager("./shaders/vertex.vert", "./shaders/fragment.frag");
-	test = new box(0.3f, 0.1f, -0.3f, -0.1f, test2);
-	box test3(-0.7,-0.7,-0.6,0,test2);
-	
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	rect test(0,0, 1 ,.1);
+	test.shader = test2;
+	mainRender.add(&test);
 	while (isRunning){
-		glClearColor(0, 0.5, (SDL_GetTicks()%1000)/1000.f, 0);
+
+		glClearColor(0,0,0, 0);
 		glClear(GL_COLOR_BUFFER_BIT);
-		test2->use();
-		test->draw();
-		test3.draw();
+		test.rotation = SDL_GetTicks()/2000.f;
+		test.updatePos();
+		test.setCol(1, 1, 1, 0);
+		//test.setCol((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX, 1);
+
+		//test3->draw();
+		//test->setCol((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand()/RAND_MAX, 1);
+		//test3.setCol(0, 0, 1.0, 0);
+		//test->setCoords(1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX,1- 2.f*(float)rand() / RAND_MAX);
+		//test3.setCoords(1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX);
+
 		
+		mainRender.drawAll();
+
 		SDL_GL_SwapWindow(mainWindow);
 
 		handleInputs();

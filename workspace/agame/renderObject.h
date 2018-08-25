@@ -10,6 +10,7 @@ public:
 	GLuint VAO;
 	GLuint VBO;
 	GLuint EBO;
+	std::list<renderObject*>::iterator me;
 	shaderManager* shader;
 	virtual void draw()=0;
 	renderObject();

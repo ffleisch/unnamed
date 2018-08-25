@@ -10,4 +10,9 @@
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <math.h>
+#include <list>
+#include <glm.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
 #endif // !COMMON_INC
+ 

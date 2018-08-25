@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\renderstuff">
-      <UniqueIdentifier>{78605cf7-3666-4941-9f32-84b9af8b0f6d}</UniqueIdentifier>
+    <Filter Include="Source Files\renderStuff">
+      <UniqueIdentifier>{104e1335-40ac-447a-8a8f-9334bb87c5de}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,13 +33,19 @@
     <ClCompile Include="render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="renderObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="shaderManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="box.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="renderObject.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="singleGO.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,6 +72,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singleGO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
