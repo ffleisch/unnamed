@@ -27,7 +27,7 @@ void singleGO::bufferData()
 	glBindVertexArray(VAO);
 	
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*elemNum, data, GL_STATIC_DRAW);
+	glBufferSubData(GL_ARRAY_BUFFER,0, sizeof(float)*elemNum, data);
 	
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int)*indNum, ind, glMode);

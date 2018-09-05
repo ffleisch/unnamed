@@ -11,10 +11,11 @@ public:
 	shaderManager* shader;
 	float vertices[12];
 	GLuint indices[6];
-	float color[4];
+	color boxColor;
 	void draw();
 	void setCoords(float x1, float y1, float x2, float y2);
 	void setCol(float red, float green, float blue, float alpha);
+	void setCol(color col);
 	box(float x1,float y1, float x2,float y2,shaderManager *myShader);
 	~box();
 };

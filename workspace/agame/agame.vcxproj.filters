@@ -16,6 +16,15 @@
     <Filter Include="Source Files\renderStuff">
       <UniqueIdentifier>{104e1335-40ac-447a-8a8f-9334bb87c5de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\guistuff">
+      <UniqueIdentifier>{a5f7480a-1c88-4f35-bf75-bd29c317bfff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderstuff">
+      <UniqueIdentifier>{339f4d10-b373-4d0b-baa4-79de21a8f290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\guistuff">
+      <UniqueIdentifier>{cb8ead90-bf6e-4358-8bb1-8082a052d6df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -27,15 +36,6 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gui.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="render.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="shaderManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="box.cpp">
       <Filter>Source Files\renderStuff</Filter>
     </ClCompile>
@@ -45,8 +45,26 @@
     <ClCompile Include="singleGO.cpp">
       <Filter>Source Files\renderStuff</Filter>
     </ClCompile>
+    <ClCompile Include="gui.cpp">
+      <Filter>Source Files\guistuff</Filter>
+    </ClCompile>
     <ClCompile Include="rect.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderManager.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="guiNode.cpp">
+      <Filter>Source Files\guistuff</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Source Files\guistuff</Filter>
+    </ClCompile>
+    <ClCompile Include="vbox.cpp">
+      <Filter>Source Files\guistuff</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,26 +77,35 @@
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gui.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="render.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="renderObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="shaderManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="box.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\renderstuff</Filter>
     </ClInclude>
-    <ClInclude Include="singleGO.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="gui.h">
+      <Filter>Header Files\guistuff</Filter>
     </ClInclude>
     <ClInclude Include="rect.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="renderObject.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderManager.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="singleGO.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="guiNode.h">
+      <Filter>Header Files\guistuff</Filter>
+    </ClInclude>
+    <ClInclude Include="vbox.h">
+      <Filter>Header Files\guistuff</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Header Files\guistuff</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

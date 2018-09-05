@@ -128,27 +128,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="box.cpp" />
+    <ClCompile Include="button.cpp" />
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gui.cpp" />
+    <ClCompile Include="guiNode.cpp" />
     <ClCompile Include="rect.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="renderObject.cpp" />
     <ClCompile Include="shaderManager.cpp" />
     <ClCompile Include="singleGO.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="vbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="box.h" />
+    <ClInclude Include="button.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gui.h" />
+    <ClInclude Include="guiNode.h" />
     <ClInclude Include="rect.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="renderObject.h" />
     <ClInclude Include="shaderManager.h" />
     <ClInclude Include="singleGO.h" />
+    <ClInclude Include="vbox.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\fragment.frag" />

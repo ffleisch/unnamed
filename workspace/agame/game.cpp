@@ -41,27 +41,33 @@ void game::init(){
 
 void game::gameloop(){
 	test2 = new shaderManager("./shaders/vertex.vert", "./shaders/fragment.frag");
+	mainRender=new render(test2);
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	rect test(0,0, 1 ,.1);
-	test.shader = test2;
-	mainRender.add(&test);
-	while (isRunning){
+	//rect test(0,0, 1 ,.1);
+	//test.shader = test2;
+	button* btn;
+	mNode = new guiNode();
+	vbox* theBox = new vbox();
+	theBox->spacing = 0.06;
+	theBox->transy = -5 * theBox->spacing;
+	for (int i = 0; i < 10; i++) {
+		btn = new button(0.5, 0.05, NULL);
+		btn->setCol(1, 0, 0, 0);
+		//btn->transy = 0.5f-(float)0.1f*i;
+		btn->num = i;
+		//btn->onClick = &testFunc;
+		theBox->add(btn);
+		mainRender->add(&btn->img);
+	}
+	mNode->add(theBox);
+	mNode->updateAll();
 
+	while (isRunning){
+		
 		glClearColor(0,0,0, 0);
 		glClear(GL_COLOR_BUFFER_BIT);
-		test.rotation = SDL_GetTicks()/2000.f;
-		test.updatePos();
-		test.setCol(1, 1, 1, 0);
-		//test.setCol((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand() / RAND_MAX, 1);
-
-		//test3->draw();
-		//test->setCol((float)rand() / RAND_MAX, (float)rand() / RAND_MAX, (float)rand()/RAND_MAX, 1);
-		//test3.setCol(0, 0, 1.0, 0);
-		//test->setCoords(1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX,1- 2.f*(float)rand() / RAND_MAX);
-		//test3.setCoords(1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX, 1 - 2.f*(float)rand() / RAND_MAX);
-
 		
-		mainRender.drawAll();
+		mainRender->drawAll();
 
 		SDL_GL_SwapWindow(mainWindow);
 
@@ -81,6 +87,7 @@ void game::quit()
 void game::handleInputs()
 {
 	while (SDL_PollEvent(&events)) {
+		mNode->checkEvent(&events);
 		if (events.type == SDL_QUIT) {
 			isRunning = false;
 		}

@@ -12,6 +12,7 @@ void render::drawAll()
 
 void render::add(renderObject *obj)
 {
+	obj->setShader(mainShader);
 	objectList.push_back(obj);
 	obj->me=objectList.end();
 }
@@ -21,8 +22,9 @@ void render::rem(renderObject *obj)
 	objectList.erase(obj->me);
 }
 
-render::render()
+render::render(shaderManager* shader)
 {
+	mainShader = shader;
 }
 
 

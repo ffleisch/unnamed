@@ -4,7 +4,7 @@
 
 void box::draw()
 {
-	glUniform4f(glGetUniformLocation(shader->ID, "col"), color[0], color[1], color[2], color[3]);
+	glUniform4f(glGetUniformLocation(shader->ID, "col"), boxColor.r, boxColor.g, boxColor.b, boxColor.a);
 
 	shader->use();
 	glBindVertexArray(VAO);
@@ -36,10 +36,11 @@ void box::setCoords(float x1, float y1, float x2, float y2)
 
 void box::setCol(float red, float green, float blue, float alpha)
 {
-	color[0] = red;
-	color[1] = green;
-	color[2] = blue;
-	color[3] = alpha;
+	boxColor=color(red,green,blue,alpha);
+}
+
+void box::setCol(color col) {
+	boxColor = col;
 }
 
 box::box(float x1, float y1, float x2, float y2,shaderManager *myShader)

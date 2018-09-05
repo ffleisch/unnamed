@@ -12,6 +12,7 @@ public:
 	GLuint EBO;
 	std::list<renderObject*>::iterator me;
 	shaderManager* shader;
+	void setShader(shaderManager* m);
 	virtual void draw()=0;
 	renderObject();
 	~renderObject();

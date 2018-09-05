@@ -19,10 +19,12 @@ void rect::init()
 
 void rect::setCol(float r, float g, float b, float a)
 {
-	color[0] = r;
-	color[1] = g;
-	color[2] = b;
-	color[3] = a;
+	rColor = color(r,g,b,a);
+}
+
+void rect::setCol(color col)
+{
+	rColor = col;
 }
 
 void rect::updateData(float x1, float y1, float x2, float y2)
@@ -73,7 +75,7 @@ void rect::updatePos()
 void rect::setShaders()
 {
 	glUniformMatrix4fv(glGetUniformLocation(shader->ID, "transform"),1,GL_FALSE,glm::value_ptr(transf));
-	glUniform4f(glGetUniformLocation(shader->ID, "col"), color[0], color[1], color[2], color[3]);
+	glUniform4f(glGetUniformLocation(shader->ID, "col"), rColor.r, rColor.g, rColor.b, rColor.a);
 }
 
 rect::rect(float x, float y, float w, float h)

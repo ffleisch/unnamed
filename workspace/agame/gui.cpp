@@ -2,6 +2,11 @@
 
 
 
+void gui::update()
+{
+	root.updateAll();
+}
+
 gui::gui()
 {
 }
