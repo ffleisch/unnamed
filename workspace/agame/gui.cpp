@@ -7,11 +7,18 @@ void gui::update()
 	root.updateAll();
 }
 
-gui::gui()
+void gui::checkEvents(SDL_Event * e)
 {
+	root.checkEvent(e);
+}
+
+gui::gui(shaderManager* buttonShader):guiRender(buttonShader),root(&guiRender)
+{
+
 }
 
 
 gui::~gui()
 {
+
 }

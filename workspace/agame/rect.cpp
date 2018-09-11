@@ -72,7 +72,7 @@ void rect::updatePos()
 	transf = glm::translate(transf,glm::vec3(posx,posy,0.f));
 }
 
-void rect::setShaders()
+void rect::setShaderUni()
 {
 	glUniformMatrix4fv(glGetUniformLocation(shader->ID, "transform"),1,GL_FALSE,glm::value_ptr(transf));
 	glUniform4f(glGetUniformLocation(shader->ID, "col"), rColor.r, rColor.g, rColor.b, rColor.a);

@@ -25,8 +25,8 @@ void guiNode::checkEvent(SDL_Event* e)
 	std::list<guiNode*>::iterator iter;
 	for (iter = children.begin(); iter != children.end(); iter++) {
 
-			(*iter)->checkEvent(e);
-		
+		(*iter)->checkEvent(e);
+
 	}
 }
 
@@ -43,14 +43,63 @@ const float guiNode::toGLCordY(int y)
 void guiNode::add(guiNode * n)
 {
 	children.push_back(n);
-	n->parent=this;
+	n->me = children.end();
+	n->me--;
+	n->guiRender = guiRender;
+	n->parent = this;
+
+	setRendChild();
+}
+
+void guiNode::rem(guiNode * n)
+{
+	children.erase(n->me);
+}
+
+void guiNode::setRendChild()
+{
+	std::list<guiNode*>::iterator iter;
+	for (iter = children.begin(); iter != children.end(); iter++) {
+		if ((*iter)->guiRender != guiRender) {
+			(*iter)->guiRender = guiRender;
+			setRendChild();
+		}
+		
+	}
+}
+
+
+guiNode::guiNode(guiNode* par)
+{
+	parent = par;
+	guiRender = par->guiRender;
 }
 
 guiNode::guiNode()
 {
+	isRoot = true;
+	parent = NULL;
 }
 
 
+guiNode::guiNode(render* rend)
+{
+	guiNode();
+	guiRender = rend;
+}
+
 guiNode::~guiNode()
 {
+	
+	if (children.size() > 0) {
+		std::list<guiNode*>::iterator iter = children.begin();
+		while (iter != children.end()) {
+			iter++;
+			delete(*std::prev(iter));
+		}
+	}
+	if (!isRoot) {
+		parent->rem(this);
+	}
+
 }

@@ -1,0 +1,30 @@
+﻿  box.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  button.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  Error.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  game.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  gui.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  guiNode.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  rect.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  render.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  renderObject.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  shaderManager.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  singleGO.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  Source.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  text.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+  textHelper.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\textHelper.h(6): fatal error C1083: Cannot open include file: 'ft2build.h': No such file or directory
+  vbox.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\common.h(9): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory

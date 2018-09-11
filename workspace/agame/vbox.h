@@ -9,7 +9,7 @@ class vbox:public guiNode
 {
 public:
 	float spacing=0.1;
-	vbox();
+	vbox(guiNode * par);
 	virtual void updateAll();
 	~vbox();
 };

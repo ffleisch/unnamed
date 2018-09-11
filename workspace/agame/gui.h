@@ -6,10 +6,12 @@
 class gui
 {
 public:
-	//virtual void render()=0;
+	bool isEnabled = true;
+	render guiRender;
 	guiNode root;
-	void update();
-	gui();
+	virtual void update();
+	virtual void checkEvents(SDL_Event* e);
+	gui(shaderManager* buttonRender);
 	~gui();
 };
 

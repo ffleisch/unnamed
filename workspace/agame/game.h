@@ -6,6 +6,10 @@
 #include "rect.h"
 #include "button.h"
 #include "vbox.h"
+#include "gui.h"
+#include "textHelper.h"
+#include "text.h"
+
 #ifndef GAME_INC
 #define GAME_INC
 
@@ -16,13 +20,19 @@ class game
 public:
 
 	shaderManager* test2;
-	guiNode* mNode;
+
+	textHelper* ttest;
+
+	gui* myGui;
 	render* mainRender;
 	gamestate state = menu;
 	bool isRunning = true;
 
 	SDL_Window* mainWindow=NULL;
 	SDL_GLContext mainContext;
+
+	int windowWidth, windowHeight;
+
 
 	game();
 	~game();

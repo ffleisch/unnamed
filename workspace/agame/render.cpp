@@ -15,6 +15,7 @@ void render::add(renderObject *obj)
 	obj->setShader(mainShader);
 	objectList.push_back(obj);
 	obj->me=objectList.end();
+	obj->me--;
 }
 
 void render::rem(renderObject *obj)

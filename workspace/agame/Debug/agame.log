@@ -1,22 +1,13 @@
-﻿  renderObject.cpp
-  render.cpp
+﻿  textHelper.cpp
   game.cpp
+c:\users\felix\documents\github\unnamed\workspace\agame\button.h(17): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\felix\documents\github\unnamed\workspace\agame\button.h(18): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\felix\documents\github\unnamed\workspace\agame\button.h(19): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\felix\documents\github\unnamed\workspace\agame\button.h(20): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\felix\documents\github\unnamed\workspace\agame\vbox.h(11): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\felix\documents\github\unnamed\workspace\agame\game.cpp(51): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\felix\documents\github\unnamed\workspace\agame\game.cpp(54): warning C4305: 'argument': truncation from 'double' to 'float'
-  Generating Code...
-  Compiling...
-  Source.cpp
-c:\users\felix\documents\github\unnamed\workspace\agame\button.h(19): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\felix\documents\github\unnamed\workspace\agame\button.h(20): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\felix\documents\github\unnamed\workspace\agame\vbox.h(11): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\felix\documents\github\unnamed\workspace\agame\game.cpp(52): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\felix\documents\github\unnamed\workspace\agame\game.cpp(55): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
   Skipping... (no relevant changes detected)
-  guiNode.cpp
-  singleGO.cpp
-  rect.cpp
-  button.cpp
-  box.cpp
+  text.cpp
+  Source.cpp
   agame.vcxproj -> C:\Users\Felix\Documents\GitHub\unnamed\workspace\Debug\agame.exe

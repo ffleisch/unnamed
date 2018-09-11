@@ -1,9 +1,18 @@
 #pragma once
 #include "renderObject.h"
+
+
+//einzelnes objekt das zum renderer hinzugefügt werden kann
+
+//kann vertices in data als dreiecke anzeigen
+//ruft in draw() genau einmal glDrawElements auf
+
 class singleGO :
 	public renderObject
 {
 public:
+	GLuint mode = GL_STATIC_DRAW;
+
 	float* data;
 	GLuint* ind;
 	float posx=0, posy=0;
@@ -14,10 +23,11 @@ public:
 	void init();//initialisierung
 	void bufferData();//buffer data
 	//void updateData();//change data in array
-	virtual void setShaders()=0;//set shader settings
+	virtual void setShaderUni()=0;//set shader settings
 	GLuint glMode = GL_STATIC_DRAW;
 	void draw();
 	singleGO();
+	singleGO(GLuint drawMode);
 	~singleGO();
 };
 

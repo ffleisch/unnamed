@@ -66,6 +66,12 @@
     <ClCompile Include="vbox.cpp">
       <Filter>Source Files\guistuff</Filter>
     </ClCompile>
+    <ClCompile Include="textHelper.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>Source Files\renderStuff</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h">
@@ -107,12 +113,24 @@
     <ClInclude Include="button.h">
       <Filter>Header Files\guistuff</Filter>
     </ClInclude>
+    <ClInclude Include="textHelper.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Header Files\renderstuff</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\vertex.vert">
+    <None Include="shaders\button.frag">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="shaders\fragment.frag">
+    <None Include="shaders\button.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\text.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\text.vert">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -1,11 +1,11 @@
 #include "button.h"
 
-button::button(float w, float h, guiNode * par):img(0,0,w,h)
+button::button(float w, float h, guiNode * par):img(0,0,w,h),guiNode(par)
 {
-	parent = par;
+	color(.5, 0.5, 0.8);
+	guiRender->add(&img);
 	width = w;
 	height = h;
-
 }
 
 void button::updateAll() {
@@ -21,6 +21,8 @@ void button::checkEvent(SDL_Event* e) {
 		if (e->button.button == SDL_BUTTON_LEFT) {
 			if (isInside(e->button.x,e->button.y)) {
 				isPressed = true;
+				normCol = color(0.2, (float)rand()/RAND_MAX, 0.3);
+				//delete(parent);
 				if (onClick != NULL) {
 					onClick();
 				}
@@ -75,4 +77,5 @@ void button::setCol(float r, float g, float b, float a)
 
 button::~button()
 {
+	guiRender->rem(&img);
 }

@@ -2,7 +2,7 @@
 
 
 
-vbox::vbox()
+vbox::vbox(guiNode* par):guiNode(par)
 {
 }
 

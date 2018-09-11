@@ -76,11 +76,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glm;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\freetype\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glm;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\lib\x86;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\freetype\objs;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\lib\x86;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -90,11 +90,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\freetype\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\include;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glm;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\freetype\objs;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\glew-2.1.0\lib\Release\x64;C:\Users\Felix\Documents\GitHub\unnamed\workspace\agame\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;freetype.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -139,6 +139,8 @@
     <ClCompile Include="shaderManager.cpp" />
     <ClCompile Include="singleGO.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="textHelper.cpp" />
     <ClCompile Include="vbox.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,11 +156,15 @@
     <ClInclude Include="renderObject.h" />
     <ClInclude Include="shaderManager.h" />
     <ClInclude Include="singleGO.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="textHelper.h" />
     <ClInclude Include="vbox.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\fragment.frag" />
-    <None Include="shaders\vertex.vert" />
+    <None Include="shaders\button.frag" />
+    <None Include="shaders\button.vert" />
+    <None Include="shaders\text.frag" />
+    <None Include="shaders\text.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,13 +11,12 @@ class button :
 public:
 	rect img;
 	float width, height;
-	bool state=false;
 	bool isPressed = false;
 	void (*onClick)();
 	int num=-1;
-	color hoverCol=color(.5);
-	color normCol = color(.7);
-	color pressCol = color(0.3,0.3,1.0);
+	color hoverCol=color(0.3, 0.3, 1.0);
+	color pressCol = color(1.0,0.2,0.0);
+	color normCol = color(.5, 0.5, 0.8);
 	button(float width,float height,guiNode* par);
 	
 	virtual void updateAll();

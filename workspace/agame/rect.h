@@ -17,7 +17,7 @@ public:
 	void setPos(float px,float py);
 	void setRot(float rot);
 	void setPosRot(float px, float py, float rot);
-	void setShaders();
+	virtual void setShaderUni();
 
 
 	rect(float x, float y, float w, float h);
